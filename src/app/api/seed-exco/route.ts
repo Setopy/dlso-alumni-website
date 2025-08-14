@@ -37,29 +37,44 @@ const initialExcoMembers = [
     updatedAt: new Date()
   },
   {
-    id: "exco_vp",
-    name: "Mojisola Clara Hosu",
-    title: "Dr.",
-    role: "Vice President", 
-    phone: "+27 67 956 7812",
-    whatsappLink: "https://wa.me/27679567812",
-    bio: "Post-doctoral researcher in medical microbiology, former tax officer in Nigeria. Co-founder of Shepherd House Ministry with her husband, leading our international expansion efforts.",
-    detailedBio: "International coordinator and medical researcher with extensive experience in microbiology research. Co-founder of Shepherd House Ministry (Mummy GO), leading our South African alumni chapter.",
-    currentPositions: [
-      "Vice President, DLSO Alumni Ondo",
-      "Post-Doctoral Researcher, Medical Microbiology",
-      "Former Tax Officer, Nigeria", 
-      "Co-founder, Shepherd House Ministry"
-    ],
-    personalInfo: {
-      maritalStatus: "Married (Mummy GO)"
-    },
-    location: "South Africa",
-    country: "South Africa", 
-    ministryFocus: "International Relations & Medical Ministry",
-    createdAt: new Date(),
-    updatedAt: new Date()
+  id: "exco_vp",
+  name: "Mojisola Clara HOSU", // ✅ Fixed capitalization
+  title: "Dr.",
+  role: "Vice President", 
+  phone: "+27 67 956 7812",
+  whatsappLink: "https://wa.me/27679567812",
+  bio: "Passionate about counseling youths and impacting lives. Dedicated to serving God and using gifts for His glory while pursuing excellence in academia and ministry.",
+  detailedBio: "Vice-President of DLSO Alumni Ondo and Postdoctoral Research Fellow at Walter Sisulu University. Serves as Postgraduate Scholarship Guide and Research Mentor in Science. Co-leads Shepherds House For All Nations Ministries as Vice-President. Passionate about counseling youths, impacting lives, and serving God through academic excellence and ministry leadership.",
+  currentPositions: [
+    "Vice-President, DLSO Alumni Ondo",
+    "Postdoctoral Research Fellow, Walter Sisulu University", // ✅ Updated
+    "Postgraduate Scholarship Guide", // ✅ Added
+    "Postgraduate Research Mentor (Science)", // ✅ Added
+    "Vice-President, Shepherds House For All Nations Ministries (NPO)" // ✅ Updated
+  ],
+  personalInfo: {
+    birthday: "September 24", // ✅ Added
+    wedding: "June 14", // ✅ Added
+    bibleVerse: "Philippians 4:13, Titus 2:11-14, Isaiah 49:16, Numbers 23:19", // ✅ Added
+    maritalStatus: "Married with 3 jewels", // ✅ Updated
+    favoriteColors: ["Sky blue", "pink", "lilac", "orange"], // ✅ Added
+    favoriteMeal: "Beans, steamed bread, fries and vegetable salad", // ✅ Added
+    hobbies: [ // ✅ Added comprehensive hobbies
+      "Counseling youths and impacting lives",
+      "Music and dancing to God's glory", 
+      "Serving God and using my gifts for His glory",
+      "My family and kids",
+      "Love to connect with people and relate with them on a personal level",
+      "Strive for excellence",
+      "Continuous learning and self improvement"
+    ]
   },
+  location: "South Africa",
+  country: "South Africa",
+  ministryFocus: "International Relations & Youth Development", // ✅ Updated
+  createdAt: new Date(),
+  updatedAt: new Date()
+},
   {
     id: "exco_gensec",
     name: "Ayokunle Felix AKINSADE",
