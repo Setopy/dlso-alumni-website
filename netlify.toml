@@ -1,5 +1,4 @@
 [build]
-  base = "dlso-choir-alumni"
   command = "npm run build"
   publish = ".next"
 
