@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { connectToDatabase } from '@/lib/mongodb'
+import { InsertOneResult } from 'mongodb'
 
 // ✅ ENHANCED: Circuit breaker for MongoDB connections
 let connectionFailures = 0
@@ -155,7 +156,7 @@ export async function POST(request: NextRequest) {
     let body
     try {
       body = await request.json()
-    } catch (parseError) {
+    } catch {
       return NextResponse.json(
         { 
           success: false,
@@ -241,10 +242,10 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message: 'Memory shared successfully!',
-      memoryId: (result as any).insertedId.toString(),
+      memoryId: (result as InsertOneResult).insertedId.toString(),
       memory: {
         ...memory,
-        _id: (result as any).insertedId.toString(),
+        _id: (result as InsertOneResult).insertedId.toString(),
         createdAt: memory.createdAt.toISOString()
       }
     }, { status: 201 })
