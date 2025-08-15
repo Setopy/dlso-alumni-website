@@ -38,6 +38,7 @@ export default function SundayServiceReunionPage() {
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 896px"
                 priority
+                unoptimized
               />
               
               {/* FALLBACK: If you don't have the photo yet, uncomment this instead:
