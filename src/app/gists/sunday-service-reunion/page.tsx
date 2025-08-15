@@ -2,9 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-// ✅ Static import from public/images
-import reunionPhoto from '@/public/images/sunday-service-reunion.jpg'
-
 export default function SundayServiceReunionPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -33,21 +30,32 @@ export default function SundayServiceReunionPage() {
           {/* FEATURED PHOTO SECTION */}
           <div className="mb-8">
             <div className="relative h-96 rounded-xl overflow-hidden">
+              {/* YOUR REUNION PHOTO GOES HERE */}
               <Image
-                src={reunionPhoto} // ✅ Static import ensures optimization
+                src="/images/sunday-service-reunion.jpg" // Your photo
                 alt="DLSO Alumni Sunday Service Reunion - Sisters in beautiful traditional attire"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 896px"
                 priority
+                
               />
+              
+              {/* FALLBACK: If you don't have the photo yet, uncomment this instead:
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <span className="text-8xl mb-4 block">📸</span>
+                  <p className="text-2xl font-semibold mb-2">Sunday Service Reunion Photo</p>
+                  <p className="text-lg opacity-90">Add your reunion photo here</p>
+                </div>
+              </div>
+              */}
             </div>
             <p className="text-center text-gray-600 mt-3 text-sm italic">
               The photo that sparked joy across our global DLSO family
             </p>
           </div>
 
-          {/* ARTICLE BODY */}
           <div className="prose prose-lg max-w-none">
             <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
               <p className="text-blue-800 font-medium italic">
@@ -151,3 +159,5 @@ export default function SundayServiceReunionPage() {
     </div>
   )
 }
+
+
