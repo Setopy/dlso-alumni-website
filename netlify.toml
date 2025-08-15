@@ -11,11 +11,23 @@
 [functions]
   node_bundler = "esbuild"
 
+# ------------------------------
+# Redirect Rules
+# ------------------------------
+
+# Serve Next.js static assets correctly
 [[redirects]]
   from = "/_next/static/*"
-  to = "/static/:splat"
+  to = "/_next/static/:splat"
   status = 200
 
+# Allow access to all Next.js internal paths (e.g., image optimizer, chunks)
+[[redirects]]
+  from = "/_next/*"
+  to = "/_next/:splat"
+  status = 200
+
+# Main SPA fallback (only if using Next.js static export or client-side routing)
 [[redirects]]
   from = "/*"
   to = "/index.html"
