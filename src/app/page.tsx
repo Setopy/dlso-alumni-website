@@ -54,7 +54,7 @@ export default function Home() {
               Share memories, connect with fellow alumni, and continue the fellowship 
               that began in Ondo Region.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 justify-center max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 justify-center max-w-6xl mx-auto">
               <Link href="/memories/new" className="group relative bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-4 rounded-xl hover:from-amber-700 hover:to-orange-700 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
                 <span className="relative z-10 flex items-center justify-center space-x-2">
                   <span>📸</span>
@@ -62,6 +62,14 @@ export default function Home() {
                   <span className="sm:hidden">Memory</span>
                 </span>
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Link>
+              
+              <Link href="/gists" className="group bg-gradient-to-r from-indigo-600 to-indigo-700 text-white px-6 py-4 rounded-xl hover:from-indigo-700 hover:to-indigo-800 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                <span className="flex items-center justify-center space-x-2">
+                  <span>📰</span>
+                  <span className="hidden sm:inline">New Gists</span>
+                  <span className="sm:hidden">Gists</span>
+                </span>
               </Link>
               
               <Link href="/alumni" className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-4 rounded-xl hover:from-purple-700 hover:to-purple-800 transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
@@ -167,6 +175,7 @@ export default function Home() {
             <div>
               <h4 className="text-xl font-bold mb-6 text-white">Quick Links</h4>
               <ul className="space-y-3 text-slate-300">
+                <li><Link href="/gists" className="hover:text-amber-400 transition-colors">New Gists</Link></li>
                 <li><Link href="/alumni" className="hover:text-amber-400 transition-colors">Alumni Directory</Link></li>
                 <li><Link href="/prayers" className="hover:text-amber-400 transition-colors">Prayer Requests</Link></li>
                 <li><Link href="/exco" className="hover:text-amber-400 transition-colors">EXCO Leadership</Link></li>
@@ -193,4 +202,4 @@ export default function Home() {
       </footer>
     </div>
   )
-}
+} 

@@ -74,7 +74,7 @@ const initialExcoMembers = [
   ministryFocus: "International Relations & Youth Development", // ✅ Updated
   createdAt: new Date(),
   updatedAt: new Date()
-},
+}   ,
   {
     id: "exco_gensec",
     name: "Ayokunle Felix AKINSADE",
