@@ -25,7 +25,7 @@ export default function NewGistsPage() {
           <div className="md:flex">
             {/* Article Image Section */}
             <div className="md:w-1/3">
-              <div className="relative h-64 md:h-full min-h-[300px]">
+              <div className="relative h-64 md:h-full min-h-[350px]">
                 {/* YOUR REUNION PHOTO GOES HERE */}
                 <Image
                   src="/images/sunday-service-reunion.jpg"
@@ -33,7 +33,7 @@ export default function NewGistsPage() {
                   fill
                   unoptimized={true}
                   className="object-cover"
-                  sizes="(max-width: 800px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   priority
                 />
                 
@@ -75,8 +75,15 @@ export default function NewGistsPage() {
                 >
                   Read Full Story
                 </Link>
-                <button className="border border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-xl font-semibold transition-all duration-300">
-                  Share Story
+                <button 
+                  onClick={() => {
+                    const text = "Check out this heartwarming DLSO reunion story: One Photo, Endless Joy";
+                    const url = `${window.location.origin}/gists/sunday-service-reunion`;
+                    window.open(`https://wa.me/?text=${encodeURIComponent(text + " " + url)}`, '_blank');
+                  }}
+                  className="border border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                >
+                  📱 Share Story
                 </button>
               </div>
             </div>
@@ -94,14 +101,81 @@ export default function NewGistsPage() {
               href="/memories/new" 
               className="bg-white text-orange-600 px-8 py-3 rounded-xl font-semibold hover:bg-orange-50 transition-colors shadow-lg"
             >
-              Share Your Story
+              📝 Share Your Story
             </Link>
             <a 
-              href="mailto:admin@dlsoalumni.org" 
+              href="https://wa.me/2348056461852"
+              target="_blank"
+              rel="noopener noreferrer" 
               className="bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-orange-700 transition-colors shadow-lg border-2 border-white"
             >
-              Contact Admin
+              💬 Contact Admin
             </a>
+            <a 
+              href="mailto:dlsondoalum@gmail.com" 
+              className="bg-orange-700 text-white px-8 py-3 rounded-xl font-semibold hover:bg-orange-800 transition-colors shadow-lg border-2 border-white"
+            >
+              📧 Email Admin
+            </a>
+          </div>
+          
+          {/* Quick Contact Info */}
+          <div className="mt-6 pt-6 border-t border-orange-300/30">
+            <p className="text-sm opacity-80 mb-3">Follow us on social media:</p>
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
+              <a
+                href="https://www.youtube.com/@dlsondoalum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600/20 text-white px-3 py-1 rounded-lg hover:bg-red-600/40 transition-colors"
+              >
+                📺 YouTube
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61579762760906"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600/20 text-white px-3 py-1 rounded-lg hover:bg-blue-600/40 transition-colors"
+              >
+                📘 Facebook
+              </a>
+              <a
+                href="https://twitter.com/dlsondoalumni"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-400/20 text-white px-3 py-1 rounded-lg hover:bg-blue-400/40 transition-colors"
+              >
+                🐦 X (Twitter)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Navigation */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold mb-6 text-center">Explore More</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/alumni" className="block bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+              <div className="text-center">
+                <span className="text-4xl mb-3 block">👥</span>
+                <h4 className="font-bold text-lg mb-2">Alumni Directory</h4>
+                <p className="text-gray-600">Connect with other DLSO alumni worldwide</p>
+              </div>
+            </Link>
+            <Link href="/memories" className="block bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+              <div className="text-center">
+                <span className="text-4xl mb-3 block">📖</span>
+                <h4 className="font-bold text-lg mb-2">Memory Lane</h4>
+                <p className="text-gray-600">Browse through shared memories and stories</p>
+              </div>
+            </Link>
+            <Link href="/events" className="block bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+              <div className="text-center">
+                <span className="text-4xl mb-3 block">🎉</span>
+                <h4 className="font-bold text-lg mb-2">Upcoming Events</h4>
+                <p className="text-gray-600">Stay updated on reunions and gatherings</p>
+              </div>
+            </Link>
           </div>
         </div>
       </main>
