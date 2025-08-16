@@ -36,7 +36,7 @@ export default function SundayServiceReunionPage() {
                alt="DLSO Alumni Sunday Service Reunion - Sisters in beautiful traditional attire"
                fill
                unoptimized={true}
-               className="object-cover"
+               className="object-contain"
                priority
              />
 
