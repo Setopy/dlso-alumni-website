@@ -28,7 +28,7 @@ export default function NewGistsPage() {
           <div className="md:flex">
             {/* Article Image Section */}
             <div className="md:w-1/3">
-              <div className="relative h-64 md:h-full min-h-[350px]">
+              <div className="relative h-64 md:h-full min-h-[400px]">
                 {/* YOUR REUNION PHOTO GOES HERE */}
                 <Image
                   src="/images/sunday-service-reunion.jpg"
