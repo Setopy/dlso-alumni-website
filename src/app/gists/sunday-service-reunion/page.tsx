@@ -31,15 +31,14 @@ export default function SundayServiceReunionPage() {
           <div className="mb-8">
             <div className="relative h-96 rounded-xl overflow-hidden">
               {/* YOUR REUNION PHOTO GOES HERE */}
-              <Image
-                src="/images/sunday-service-reunion.jpg"
-                alt="DLSO Alumni Sunday Service Reunion - Sisters in beautiful traditional attire"
-                width={896}
-                height={384}
-                unoptimized={true}
-                className="w-full h-full object-cover rounded-xl"
-                priority
-                />
+             <Image
+               src="/images/sunday-service-reunion.jpg"
+               alt="DLSO Alumni Sunday Service Reunion - Sisters in beautiful traditional attire"
+               fill
+               unoptimized={true}
+               className="object-cover"
+               priority
+             />
 
 
 
