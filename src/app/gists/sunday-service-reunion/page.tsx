@@ -29,7 +29,7 @@ export default function SundayServiceReunionPage() {
           
           {/* FEATURED PHOTO SECTION */}
           <div className="mb-8">
-            <div className="relative h-[500px] rounded-xl overflow-hidden">
+            <div className="relative h-[800px] rounded-xl overflow-hidden">
               {/* YOUR REUNION PHOTO GOES HERE */}
              <Image
                src="/images/sunday-service-reunion.jpg"
