@@ -25,14 +25,16 @@ export default function NewGistsPage() {
           <div className="md:flex">
             {/* Article Image Section */}
             <div className="md:w-1/3">
-              <div className="relative h-64 md:h-full">
+              <div className="relative h-64 md:h-full min-h-[300px]">
                 {/* YOUR REUNION PHOTO GOES HERE */}
                 <Image
-                  src="/images/sunday-service-reunion.jpg" // Your photo
+                  src="/images/sunday-service-reunion.jpg"
                   alt="DLSO Sisters at Sunday Service - Beautiful traditional attire reunion"
                   fill
+                  unoptimized={true}
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  priority
                 />
                 
                 {/* FALLBACK: If you don't have the photo yet, uncomment this instead:
@@ -62,7 +64,7 @@ export default function NewGistsPage() {
               
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Sister Katherine Kenny went to church on Sunday and took a photo with some sisters. 
-                She shared it on WhatsApp with the caption &ldquoFor those who have forgotten my face.&rdquo
+                She shared it on WhatsApp with the caption &ldquo;For those who have forgotten my face.&rdquo; 
                 Little did she know this one picture would bring so much happiness to our DLSO family around the world!
               </p>
               
