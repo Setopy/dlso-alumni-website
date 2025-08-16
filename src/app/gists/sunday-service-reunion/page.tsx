@@ -32,15 +32,17 @@ export default function SundayServiceReunionPage() {
             <div className="relative h-96 rounded-xl overflow-hidden">
               {/* YOUR REUNION PHOTO GOES HERE */}
               <Image
-                src="/images/sunday-service-reunion.jpg" // Your photo
+                src="/images/sunday-service-reunion.jpg"
                 alt="DLSO Alumni Sunday Service Reunion - Sisters in beautiful traditional attire"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 896px"
+                width={896}
+                height={384}
+                unoptimized={true}
+                className="w-full h-full object-cover rounded-xl"
                 priority
-                unoptimized
-              />
-              
+                />
+
+
+
               {/* FALLBACK: If you don't have the photo yet, uncomment this instead:
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                 <div className="text-center text-white">
