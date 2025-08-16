@@ -33,7 +33,7 @@ export default function NewGistsPage() {
                   fill
                   unoptimized={true}
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 800px) 100vw, 33vw"
                   priority
                 />
                 
